@@ -19,3 +19,9 @@ function BloquearCaracteres(e){
 	}
 	return false
 }
+
+// MASCARA DE VALORES REAIS
+$(document).ready(function(){
+	$("#valor_custo").mask("#.00" , { reverse:true});
+	$("#valor_venda").mask("#.00" , { reverse:true});
+});

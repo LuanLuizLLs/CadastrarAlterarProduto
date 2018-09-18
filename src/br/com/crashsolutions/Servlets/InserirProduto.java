@@ -52,9 +52,9 @@ public class InserirProduto extends HttpServlet {
 	                	String caminho = item.getName().toString();
 	                	String Imagem = caminho.substring(caminho.lastIndexOf("\\")+1);
 	                	
-	                	// LOCAL DE UPLOAD
-	                	item.write(new File(("C:\\Users\\luanl\\Desktop\\Eclipse\\T-Shirt Games Web\\WebContent\\resources\\img\\img-produtos") + File.separator + Imagem));
-
+	                	// LOCAL DE UPLOAD <- TESTANDO !!!
+	                	item.write(new File(("resources\\img\\img-produtos") + File.separator + Imagem));
+	                	
 	                	// CADASTRAR IMAGEM NO BANCO
 	                	produtosg.setImagem(Imagem);
 	                } 

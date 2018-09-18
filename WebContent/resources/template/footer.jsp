@@ -1,7 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 
-<!-- FOOTER -->
 <footer class="page-footer pt-4 mt-4 bg-dark text-white">
     <div class="container text-center">
       <div class="row text-center text-md-left mt-3 pb-3">

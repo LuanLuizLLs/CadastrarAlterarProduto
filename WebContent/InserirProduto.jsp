@@ -14,10 +14,13 @@
 	<link rel="stylesheet" href="resources/css/style.cadastroproduto.css">
 
 	<script src="resources/js/jquery/jquery.min.js"></script>
+	<script src="resources/js/jquery/jquery.mask.js"></script>
 	<script src="resources/js/bootstrap/popper.min.js"></script>
 	<script src="resources/js/bootstrap/bootstrap.min.js"></script>
+	
 	<script src="resources/js/script.preimagem.js"></script>
 	<script src="resources/js/script.validacaoinserirproduto.js"></script>
+	<script src="resources/js/script.formatacaodecampos.js"></script>
 </head>
 
 <body>
@@ -103,11 +106,6 @@
 				</div>
 				<hr>
 				<div class="row">
-				
-					<script type="text/javascript">
-						// $('#valor_custo, #valor_venda').mask('0.00');
-					</script>
-
 					<div class="form-group col-md">
 						<label for="formGroupExampleInput"><h5>Valor Custo</h5></label>
 						<input name="valor_custo" id="valor_custo" onfocus="RetornoValidaValorCusto()" onkeypress="return BloquearCaracteres(event)" type="text" class="form-control" placeholder="R$ 00.00" pattern="[0-9]{,2}" title="Formato correto: 0.00" required>

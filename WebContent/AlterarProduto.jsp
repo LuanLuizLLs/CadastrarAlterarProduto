@@ -8,18 +8,18 @@
 	<title>T-Shirt Games - Alterar Produtos</title>
 	<meta http-equiv="Content-Type" content="text/html">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	
 	<link rel="stylesheet" href="resources/css/bootstrap/bootstrap.css">
 	<link rel="stylesheet" href="resources/css/style.cadastroproduto.css">
-	
+
 	<script src="resources/js/jquery/jquery.min.js"></script>
+	<script src="resources/js/jquery/jquery.mask.js"></script>
 	<script src="resources/js/bootstrap/popper.min.js"></script>
 	<script src="resources/js/bootstrap/bootstrap.min.js"></script>
+	
 	<script src="resources/js/script.preimagem.js"></script>
 	<script src="resources/js/script.validacaoinserirproduto.js"></script>
+	<script src="resources/js/script.formatacaodecampos.js"></script>
 	<script src="resources/js/script.exibirmodal.js"></script>
-	
-	<script src="resources/js/script.bloquearcaracteres.js"></script>
 </head>
 
 <body>
