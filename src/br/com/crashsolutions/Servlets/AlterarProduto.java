@@ -224,15 +224,15 @@ public class AlterarProduto extends HttpServlet {
 	        } else {
 	        	System.out.println("Este Servlet realiza apenas upload de arquivos");
 	    }
+		
+		// UTILIZA O METODO DE ALTERAR DO DAO 
+		produtodao.alterar(produtosg);
 
 		// USA A AÇÃO NO DAO QUE BUSCA OS DADOS DO PRODUTO
 		ProdutoDAO listar = new ProdutoDAO();
 		
 		ArrayList<ProdutoSG> lista = listar.buscaTodos();  
 		request.setAttribute("lista_produto", lista);
-		
-		// UTILIZA O METODO DE ALTERAR DO DAO 
-		produtodao.alterar(produtosg);
 		
 		// MENSAGEM DE ALTERADO COM SUCESSO
     	request.setAttribute("mensagem", produtodao.Mensagem);
