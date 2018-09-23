@@ -1,14 +1,13 @@
-// EXIBIR MODAIS
-
-$("#CadastrarProduto").click(function(){
-	
-	$("#ProdutoCadastrado").modal();
-});
-
-function MsgCadastrado() {
-	$("#ProdutoCadastrado").modal();
-}
-
+// EXIBIR LISTA DE PRODUTOS
 function ListaProdutos() {
 	$("#ListaProdutos").modal();
 }
+
+// EXIBIR MENSAGEM DE PRODUTO CADASTRADO
+$(document).ready(function(){
+	
+	if($("#mensagem").val() != ""){
+		$("#produto_cadastrado").modal();
+	}
+	
+});

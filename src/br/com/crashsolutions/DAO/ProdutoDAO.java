@@ -15,6 +15,7 @@ public class ProdutoDAO {
 	private ProdutoSG retornoLista = new ProdutoSG();
 	private PreparedStatement stmInserir, stmConsulta, stmAlterar, stmListaConsulta;
 	private ResultSet listaConsulta, resConsulta;
+	public String Mensagem = null;
 	
 	public void inserir(ProdutoSG sgproduto) {
 		
@@ -40,10 +41,12 @@ public class ProdutoDAO {
 			stmInserir.execute();
 			stmInserir.close();
 			
-			System.out.println("Cadastrado com sucesso");
+			Mensagem = "Cadastrado com sucesso!";
+			System.out.println(Mensagem);
 			
 		} catch (Exception ex) {
-			System.out.println("Ocorreu um erro ao inserir: "+ex);
+			Mensagem = "Erro no Cadastro!";
+			System.out.println(Mensagem + ex);
 		} 
 	}
 	
@@ -108,10 +111,12 @@ public class ProdutoDAO {
 			stmAlterar.execute();
 			con.close();
 			
-			System.out.println("Alterado com sucesso");
+			Mensagem = "Alterado com sucesso";
+			System.out.println(Mensagem);
 			
 		} catch (Exception ex) {
-			System.out.println("Ocorreu um erro ao alterar: "+ex);
+			Mensagem = "Erro na Alteração!";
+			System.out.println(Mensagem + ex);
 		} 
 	}
 	

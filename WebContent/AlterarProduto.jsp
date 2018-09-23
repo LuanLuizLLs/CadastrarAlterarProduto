@@ -11,18 +11,19 @@
 	<link rel="stylesheet" href="resources/css/bootstrap/bootstrap.css">
 	<link rel="stylesheet" href="resources/css/style.cadastroproduto.css">
 
-	<script src="resources/js/jquery/jquery.min.js"></script>
-	<script src="resources/js/jquery/jquery.mask.js"></script>
-	<script src="resources/js/bootstrap/popper.min.js"></script>
-	<script src="resources/js/bootstrap/bootstrap.min.js"></script>
+	<script type="text/javascript" src="resources/js/jquery/jquery-1.11.1.js"></script>
+	<script type="text/javascript" src="resources/js/jquery/jquery.mask.js"></script>
+	<script type="text/javascript" src="resources/js/bootstrap/popper.min.js"></script>
+	<script type="text/javascript" src="resources/js/bootstrap/bootstrap.min.js"></script>
 	
-	<script src="resources/js/script.preimagem.js"></script>
-	<script src="resources/js/script.validacaoinserirproduto.js"></script>
-	<script src="resources/js/script.formatacaodecampos.js"></script>
-	<script src="resources/js/script.exibirmodal.js"></script>
+	<script type="text/javascript" src="resources/js/script.preimagem.js"></script>
+	<script type="text/javascript" src="resources/js/script.validacaocampos.js"></script>
+	<script type="text/javascript" src="resources/js/script.formatacaodecampos.js"></script>
+	<script type="text/javascript" src="resources/js/script.exibirmodal.js"></script>
 </head>
 
 <body>
+	<c:import url="resources/template/modal.mensagem.jsp"/>
 	<c:import url="resources/template/modal.listaprodutos.jsp"/>
 
 	<div class="container">

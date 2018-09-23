@@ -52,8 +52,8 @@ public class InserirProduto extends HttpServlet {
 	                	String caminho = item.getName().toString();
 	                	String Imagem = caminho.substring(caminho.lastIndexOf("\\")+1);
 	                	
-	                	// LOCAL DE UPLOAD <- TESTANDO !!!
-	                	item.write(new File(("resources\\img\\img-produtos") + File.separator + Imagem));
+	                	// LOCAL DE UPLOAD 
+	                	item.write(new File(("C:\\Users\\luanl\\git\\GitHub\\CrashSolutions\\WebContent\\resources\\img\\img-produtos") + File.separator + Imagem));
 	                	
 	                	// CADASTRAR IMAGEM NO BANCO
 	                	produtosg.setImagem(Imagem);
@@ -107,20 +107,25 @@ public class InserirProduto extends HttpServlet {
 	                		
 	                		produtosg.setQuantidade(Integer.parseInt(item.getString()));
 	                	}
-	                }
-	               
+
+	                } 
 	            }
 	            
 	        } catch (Exception ex) {
+	        	// MENSAGEM DE ERRO NO CADASTRO DA IMAGEM
 	        	System.out.println("Erro no InserirProduto: "+ ex);
 	        }
 	 
 	        } else {
+	        	// MENSAGEM DE ERRO NO UPLOAD DA IMAGEM
 	        	System.out.println("Este Servlet realiza apenas upload de arquivos");
 	    }
-		
+
     	// UTILIZA A AÇÃO DE INSERIR
     	produtodao.inserir(produtosg);
+    	
+    	// MENSAGEM DE CADASTRADO COM SUCESSO
+    	request.setAttribute("mensagem", produtodao.Mensagem);
 		
 		// ENVIAR DADOS PARA A PÁGINA JSP
 		request.getRequestDispatcher("InserirProduto.jsp").forward(request, response);

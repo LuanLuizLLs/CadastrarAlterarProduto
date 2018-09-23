@@ -1,4 +1,3 @@
-<%@ page import="br.com.crashsolutions.Conexao.Factory"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ taglib uri="http://java.sun.com/jstl/fmt" prefix="fmt"%>
@@ -13,19 +12,20 @@
 	<link rel="stylesheet" href="resources/css/bootstrap/bootstrap.css">
 	<link rel="stylesheet" href="resources/css/style.cadastroproduto.css">
 
-	<script src="resources/js/jquery/jquery.min.js"></script>
-	<script src="resources/js/jquery/jquery.mask.js"></script>
-	<script src="resources/js/bootstrap/popper.min.js"></script>
-	<script src="resources/js/bootstrap/bootstrap.min.js"></script>
+	<script type="text/javascript" src="resources/js/jquery/jquery-1.11.1.js"></script>
+	<script type="text/javascript" src="resources/js/jquery/jquery.mask.js"></script>
+	<script type="text/javascript" src="resources/js/bootstrap/popper.min.js"></script>
+	<script type="text/javascript" src="resources/js/bootstrap/bootstrap.min.js"></script>
 	
-	<script src="resources/js/script.preimagem.js"></script>
-	<script src="resources/js/script.validacaoinserirproduto.js"></script>
-	<script src="resources/js/script.formatacaodecampos.js"></script>
+	<script type="text/javascript" src="resources/js/script.preimagem.js"></script>
+	<script type="text/javascript" src="resources/js/script.validacaocampos.js"></script>
+	<script type="text/javascript" src="resources/js/script.formatacaodecampos.js"></script>
+	<script type="text/javascript" src="resources/js/script.exibirmodal.js"></script>
 </head>
 
 <body>
-	<c:import url="resources/template/modal.produtocadastrado.jsp"/>
-
+	<c:import url="resources/template/modal.mensagem.jsp"/>
+	
 	<div class="container">
 
 		<!-- FORMULÁRIO DE CASTRO DO PRODUTO -->
@@ -108,12 +108,12 @@
 				<div class="row">
 					<div class="form-group col-md">
 						<label for="formGroupExampleInput"><h5>Valor Custo</h5></label>
-						<input name="valor_custo" id="valor_custo" onfocus="RetornoValidaValorCusto()" onkeypress="return BloquearCaracteres(event)" type="text" class="form-control" placeholder="R$ 00.00" pattern="[0-9]{,2}" title="Formato correto: 0.00" required>
+						<input name="valor_custo" id="valor_custo" onfocus="RetornoValidaValorCusto()" onkeypress="return BloquearCaracteres(event)" type="text" class="form-control" placeholder="R$ 00.00" pattern="[0-9]{,2}" title="Formato deve ser 0.00" required>
 					</div>
 
 					<div class="form-group col-md">
 						<label for="formGroupExampleInput"><h5>Valor Venda</h5></label>
-						<input name="valor_venda" id="valor_venda" onfocus="RetornoValidaValorVenda()" onkeypress="return BloquearCaracteres(event)" type="text" class="form-control" placeholder="R$ 00.00" pattern="[0-9]{,2}" title="Formato correto: 0.00" required>
+						<input name="valor_venda" id="valor_venda" onfocus="RetornoValidaValorVenda()" onkeypress="return BloquearCaracteres(event)" type="text" class="form-control" placeholder="R$ 00.00" pattern="[0-9]{,2}" title="Formato deve ser 0.00" required>
 					</div>
 				</div>
 				<hr>
@@ -122,8 +122,8 @@
 						<button formaction="AlterarProduto" formmethod="get" class="btn btn-warning" formnovalidate>Alterar Produto ➔</button>
 					</div>
 					<div class="col-md-8 ml-auto center mb-3 mt-3">
-						<button id="CadastrarProduto" type="submit" class="btn btn-success" formaction="InserirProduto" formmethod="post" name="button" onclick="ValidaCadastroProduto()">Cadastrar</button>
-						<a href="index.jsp"><button type="button" class="btn btn-danger" name="button">Cancelar</button></a>
+ 						<button id="CadastrarProduto" type="submit" class="btn btn-success" formaction="InserirProduto" formmethod="post" name="button" onclick="ValidaCadastroProduto()">Cadastrar</button>
+						<a href="index.jsp"><button type="button" class="btn btn-danger">Cancelar</button></a>
 					</div>
 				</div>
 			</div>
@@ -131,8 +131,6 @@
 		</form>
 	</div>
 
-	<!-- FOOTER -->
 	<c:import url="resources/template/footer.jsp" />
-
 </body>
 </html>

@@ -234,6 +234,9 @@ public class AlterarProduto extends HttpServlet {
 		// UTILIZA O METODO DE ALTERAR DO DAO 
 		produtodao.alterar(produtosg);
 		
+		// MENSAGEM DE ALTERADO COM SUCESSO
+    	request.setAttribute("mensagem", produtodao.Mensagem);
+		
 		// EXIBIR TELA APÓS CADASTRAR O PRODUTO
 		request.getRequestDispatcher("AlterarProduto.jsp").forward(request, response);
 	}
