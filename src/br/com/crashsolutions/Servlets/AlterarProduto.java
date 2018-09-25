@@ -4,6 +4,9 @@ import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Locale;
+
+import java.text.NumberFormat;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -20,6 +23,12 @@ import br.com.crashsolutions.SG.ProdutoSG;
 
 @WebServlet("/AlterarProduto")
 public class AlterarProduto extends HttpServlet {
+	
+	// IDIOMA PARA FORMATAÇÃO
+	Locale br = new Locale("pt","BR");
+	
+	// FORMATAÇÃO DE VALORES MONETARIOS
+	NumberFormat real = NumberFormat.getCurrencyInstance(br);
 	
 	private static final long serialVersionUID = 1L;
     public AlterarProduto() {
@@ -67,8 +76,8 @@ public class AlterarProduto extends HttpServlet {
 				request.setAttribute("tamanho", Tamanho);
 				request.setAttribute("cor", Cor);
 				request.setAttribute("categoria", Categoria);
-				request.setAttribute("valor_custo", ValorCusto);
-				request.setAttribute("valor_venda", ValorVenda);
+				request.setAttribute("valor_custo", real.format(ValorCusto));
+				request.setAttribute("valor_venda", real.format(ValorVenda));
 				request.setAttribute("quantidade", Quantidade);		
 				
 				// VERIFICAÇÃO DO CAMPO GENERO PARA INSERIR NO SELECT
@@ -129,6 +138,9 @@ public class AlterarProduto extends HttpServlet {
 		ProdutoDAO produtodao = new ProdutoDAO();
 		ProdutoSG produtosg = new ProdutoSG();
 		
+		
+		
+		// VARIAVEIS DO UPLOAD DA IMAGEM
 		String caminho = null, Imagem = null;
 		
 		// UPLOAD DA IMAGEM
