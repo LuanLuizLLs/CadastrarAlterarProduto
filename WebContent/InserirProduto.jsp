@@ -48,7 +48,7 @@
 
 				<div class="card m-2">
 					<div class="form-group m-2">
-						<label for="exampleFormControlTextarea1"><h4>Descrição do Produto</h4></label>
+						<h4><label for="exampleFormControlTextarea1">Descrição do Produto</label></h4>
 						<textarea name="descricao" id="descricao" onfocus="RetornoValidaDescricao()" class="form-control" rows="4" placeholder="Digite a descrição do produto..." required>${descricao}</textarea>
 					</div>
 				</div>
@@ -57,18 +57,18 @@
 			<div class="card col-md-8 mt-4">
 				<div class="row mt-3">
 					<div class="form-group col-md">
-						<label for="formGroupExampleInput"><h5>Produto</h5></label>
+						<h5><label for="formGroupExampleInput">Produto</label></h5>
 						<input formenctype="application/x-www-form-urlencoded" name="produto" id="produto" onfocus="RetornoValidaProduto()" type="text" class="form-control" placeholder="Nome do Produto" required>
 					</div>
 					<div class="form-group col-md">
-						<label for="formGroupExampleInput"><h5>Modelo</h5></label>
+						<h5><label for="formGroupExampleInput">Modelo</label></h5>
 						<input name="modelo" id="modelo" onfocus="RetornoValidaModelo()" type="text" class="form-control" placeholder="Modelo do Produto" required>
 					</div>
 				</div>
 
 				<div class="row">
 					<div class="form-group col-md">
-						<label for="exampleFormControlSelect1"><h5>Genero</h5></label>
+						<h5><label for="exampleFormControlSelect1">Genero</label></h5>
 						<select name="genero" id="genero" onfocus="RetornoValidaGenero()" class="form-control" required>
 							<option value="" label="Selecione o Genero">
 							<option value="Feminino" label="Feminino">
@@ -77,7 +77,7 @@
 					</div>
 
 					<div class="form-group col-md">
-						<label for="exampleFormControlSelect1"><h5>Categoria</h5></label>
+						<h5><label for="exampleFormControlSelect1">Categoria</label></h5>
 						<select name="categoria" id="categoria" onfocus="RetornoValidaCategoria()" class="form-control" required>
 							<option value="" label="Selecione uma Categoria">
 							<option value="Series" label="Series">
@@ -90,29 +90,29 @@
 				<hr>
 				<div class="row">
 					<div class="form-group col-md">
-						<label for="formGroupExampleInput"><h5>Tamanho</h5></label>
+						<h5><label for="formGroupExampleInput">Tamanho</label></h5>
 						<input name="tamanho" id="tamanho" onfocus="RetornoValidaTamanho()" type="text" class="form-control" placeholder="Tamanho do Produto" required>
 					</div>
 
 					<div class="form-group col-md">
-						<label for="formGroupExampleInput"><h5>Cor</h5></label>
+						<h5><label for="formGroupExampleInput">Cor</label></h5>
 						<input name="cor" id="cor" onfocus="RetornoValidaCor()" type="text" class="form-control" placeholder="Cor do Produto" required>
 					</div>
 
 					<div class="form-group col-md">
-						<label for="formGroupExampleInput"><h5>Quantidade</h5></label>
+						<h5><label for="formGroupExampleInput">Quantidade</label></h5>
 						<input name="quantidade" id="quantidade" onfocus="RetornoValidaQuantidade()" type="number" class="form-control" placeholder="00" min="1" required>
 					</div>
 				</div>
 				<hr>
 				<div class="row">
 					<div class="form-group col-md">
-						<label for="formGroupExampleInput"><h5>Valor Custo</h5></label>
+						<h5><label for="formGroupExampleInput">Valor Custo</label></h5>
 						<input name="valor_custo" id="valor_custo" onfocus="RetornoValidaValorCusto()" onkeypress="return BloquearCaracteres(event)" type="text" class="form-control" placeholder="R$ 00.00" pattern="[0-9]{,2}" title="Formato deve ser 0.00" required>
 					</div>
 
 					<div class="form-group col-md">
-						<label for="formGroupExampleInput"><h5>Valor Venda</h5></label>
+						<h5><label for="formGroupExampleInput">Valor Venda</label></h5>
 						<input name="valor_venda" id="valor_venda" onfocus="RetornoValidaValorVenda()" onkeypress="return BloquearCaracteres(event)" type="text" class="form-control" placeholder="R$ 00.00" pattern="[0-9]{,2}" title="Formato deve ser 0.00" required>
 					</div>
 				</div>

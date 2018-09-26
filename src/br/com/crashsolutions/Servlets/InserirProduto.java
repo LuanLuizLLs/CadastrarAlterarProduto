@@ -128,7 +128,8 @@ public class InserirProduto extends HttpServlet {
     	request.setAttribute("mensagem", produtodao.Mensagem);
 		
 		// ENVIAR DADOS PARA A PÁGINA JSP
-		request.getRequestDispatcher("InserirProduto.jsp").forward(request, response);
+    	//response.sendRedirect("InserirProduto.jsp");
+    	request.getRequestDispatcher("InserirProduto.jsp").forward(request, response);
 	}
 	
 }
