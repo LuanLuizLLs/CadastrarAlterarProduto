@@ -1,2 +1,2 @@
 # CrashSolutions
-Projeto Faculdade
+Projeto Faculdade: Telas de Cadastro e Alteração de produtos
